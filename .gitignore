@@ -1,0 +1,9 @@
+/nbproject/
+/nbproject/private/
+.idea/
+/node_modules
+/bower_components
+/.grunt
+/build
+/distr
+*.pem

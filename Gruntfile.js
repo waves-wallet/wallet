@@ -77,8 +77,8 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         meta: {
             stylesheets: [
-                'bower_components/angular/angular-csp.css',
-                'bower_components/angular-material/angular-material.css',
+                'node_modules/@bower_components/angular/angular-csp.css',
+                'node_modules/@bower_components/angular-material/angular-material.css',
                 // application stylesheets
                 'distr/devel/css/style.css'
             ],
@@ -133,39 +133,47 @@ module.exports = function (grunt) {
                 }
             },
             dependencies: [
-                'bower_components/jquery/dist/jquery.js',
+                'node_modules/@bower_components/jquery/dist/jquery.js',
 
                 // this library doesn't work properly being included after angular
-                'bower_components/js-sha3/src/sha3.js',
+                'node_modules/@bower_components/js-sha3/src/sha3.js',
 
-                'bower_components/angular/angular.js',
-                'bower_components/angular-sanitize/angular-sanitize.js',
-                'bower_components/angular-animate/angular-animate.js',
-                'bower_components/angular-mocks/angular-mocks.js',
-                'bower_components/angular-aria/angular-aria.js',
-                'bower_components/angular-material/angular-material.js',
-                'bower_components/restangular/dist/restangular.js',
-                'bower_components/underscore/underscore.js',
-                'bower_components/decimal.js/decimal.js',
-                'bower_components/Base58/Base58.js',
-                'bower_components/cryptojslib/rollups/aes.js',
-                'bower_components/cryptojslib/rollups/sha256.js',
-                'bower_components/curve25519-js/axlsign.js',
-                'bower_components/clipboard/dist/clipboard.js',
-                'bower_components/ngclipboard/dist/ngclipboard.js',
-                'bower_components/nprogress/nprogress.js',
-                'bower_components/growl/javascripts/jquery.growl.js',
-                'bower_components/jquery-validation/dist/jquery.validate.js',
-                'bower_components/tooltipster/js/jquery.tooltipster.min.js',
-                'bower_components/waves-angular-validate/src/angular-validate.js',
-                'bower_components/qrious/dist/umd/qrious.js',
+                'node_modules/@bower_components/angular/angular.js',
+                'node_modules/@bower_components/angular-sanitize/angular-sanitize.js',
+                'node_modules/@bower_components/angular-animate/angular-animate.js',
+                'node_modules/@bower_components/angular-mocks/angular-mocks.js',
+                'node_modules/@bower_components/angular-aria/angular-aria.js',
+                'node_modules/@bower_components/angular-material/angular-material.js',
+                'node_modules/@bower_components/restangular/dist/restangular.js',
+                'node_modules/@bower_components/underscore/underscore.js',
+                
+                'node_modules/decimal.js/decimal.js',
+                'node_modules/base-58/Base58.js',
 
-                'bower_components/d3/d3.min.js',
-                'bower_components/techan/dist/techan.min.js',
+                'node_modules/@bower_components/cryptojslib/rollups/aes.js',
+                'node_modules/@bower_components/cryptojslib/rollups/sha256.js',
+
+                'node_modules/axlsign/axlsign.js',
+                
+                'node_modules/@bower_components/clipboard/dist/clipboard.js',
+
+                'node_modules/ngclipboard/dist/ngclipboard.js',
+                
+                'node_modules/@bower_components/nprogress/nprogress.js',
+                'node_modules/@bower_components/growl/javascripts/jquery.growl.js',
+                'node_modules/@bower_components/jquery-validation/dist/jquery.validate.js',
+                'node_modules/@bower_components/tooltipster/js/jquery.tooltipster.min.js',
+                
+                'node_modules/waves-angular-validate/src/angular-validate.js',
+
+                'node_modules/@bower_components/qrious/dist/umd/qrious.js',
+
+                'node_modules/@bower_components/d3/d3.min.js',
+                'node_modules/@bower_components/techan/dist/techan.min.js',
 
                 'src/js/vendor/jquery.modal.js',
 
-                'bower_components/wavesplatform-core-js/distr/wavesplatform-core.js'
+                'node_modules/wavesplatform-core-js/distr/wavesplatform-core.js'
             ],
             application: [
                 // project sources

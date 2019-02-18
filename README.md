@@ -3,10 +3,10 @@
 ![Alt text](https://pbs.twimg.com/media/CjUjPVgVAAA60Pv.jpg "Waves Lite Client Screen")
 
 Ever wanted to access your crypto funds quickly but had to wait for hours while the blockchain downloads first?
-The Waves Lite Client connects to public Waves nodes to retrieve up-to-date blockchain information.
+The Waves Wallet connects to public Waves nodes to retrieve up-to-date blockchain information.
 
 We provide all the cryptographic tools required to create addresses, sign and verify transactions for the Waves blockchain.
-The Lite Client reads all the data from the public nodes, creates the transaction directly in the browser,
+The Waves Wallet reads all the data from the public nodes, creates the transaction directly in the browser,
 and simply broadcasts it in a finished state.
 
 # Security
@@ -30,19 +30,19 @@ Our project uses a javascript development environment that needs to be set up be
 
 ## Prerequisites
 
-1. You need to install npm. Binaries and installation instructions could be found [here](https://nodejs.org/en/download/)
+1. You need to install `yarn`.
 2. You need to install bower. [Here](https://bower.io/) is a good link to start with.
 
 ## Environment set up
 
 Since you have your environment set up you can clone the repository and run in the project root directory
 ```
-npm install
+yarn
 ```
-Since we are reorganizing the building process, there is something more you need to have a fully working Waves Client:
+Since we are reorganizing the building process, there is something more you need to have a fully working Waves Wallet:
 ```
 npm install -g grunt
-npm install grunt
+
 grunt distr
 ```
 Those commands will prepare all required dependencies. Now feel free to open src/index.html in your browser.
@@ -51,7 +51,7 @@ Those commands will prepare all required dependencies. Now feel free to open src
 
 ## Downloadable distributions
 
-Here in the [Releases page](https://github.com/wavesplatform/WavesGUI/releases) you can find all Lite Client packages available for download.
+Here in the [Releases page](https://github.com/waves-wallet/wallet/releases) you can find all Waves Wallet packages available for download.
 For mainnet Client please download *waves-lite-client-mainnet-vx.y.z.zip*.
 For testnet use *waves-lite-client-testnet-vx.y.z.zip*.
 
@@ -75,9 +75,8 @@ This feature requires being authorized in Chrome.
 
 ## Online wallets
 
-We provide online-hosted versions of wallets for [testnet](https://testnet.waveswallet.io) and [mainnet](https://waveswallet.io).
-We do not recommend using online versions of the wallets for mainnet due to security reasons.
-The safest way is to use the Chrome plugin or binaries deployed on Github, because we can work with their administrators to address potential scams.
+**We do not recommend using online versions of the wallets for mainnet due to security reasons.**
+The safest way is to use the desktop binaries deployed on Github, because we can work with their administrators to address potential scams.
 
 # FAQ
 ## Can I generate account being completely offline?
@@ -94,3 +93,16 @@ Yes, but you will have to modify some javascript code. Follow these simple steps
 4. Change the address to the address of your node. (Something like http://127.0.0.1:6869 or http://localhost:6869)
 
 Yes, we're gonna make this much easier in the future versions...
+
+## Possible problems
+### Linux
+```
+Package cairo was not found in the pkg-config search path.
+Perhaps you should add the directory containing `cairo.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'cairo' found
+```
+Solution:
+```
+sudo apt-get install libcairo2-dev libjpeg-dev libgif-dev
+```

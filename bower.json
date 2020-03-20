@@ -22,11 +22,11 @@
     "tooltipster": "^3.3.0",
     "underscore": "1.8.3",
     "Base58": "https://github.com/45678/Base58.git",
-    "curve25519-js": "https://github.com/wavesplatform/curve25519-js.git",
+    "curve25519-js": "https://github.com/waves-wallet/curve25519-js.git",
     "decimal.js": "https://github.com/MikeMcl/decimal.js/archive/v5.0.8.zip",
     "ngclipboard": "https://github.com/beregovoy68/ngclipboard.git#1.1.3",
-    "waves-angular-validate": "https://github.com/beregovoy68/angular-validate.git#master",
-    "wavesplatform-core-js": "https://github.com/wavesplatform/wavesplatform.core.js.git#master"
+    "waves-angular-validate": "https://github.com/waves-wallet/angular-validate.git#master",
+    "wavesplatform-core-js": "https://github.com/waves-wallet/wavesplatform.core.js.git#master"
   },
   "analytics": false
 }

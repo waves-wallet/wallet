@@ -98,9 +98,9 @@ module.exports = function (grunt) {
                 mainnet: {
                     name: 'mainnet',
                     code: 'W',
-                    server: 'https://nodes.wavesnodes.org',
+                    server: 'https://nodes.wavesnodes.com/',
                     coinomat: 'https://coinomat.com',
-                    matcher: 'https://matcher.wavesnodes.org',
+                    matcher: 'https://matcher.waves.exchange',
                     datafeed: 'https://marketdata.wavesnodes.org'
                 },
                 devnet: {
@@ -146,7 +146,7 @@ module.exports = function (grunt) {
                 'node_modules/@bower_components/angular-material/angular-material.js',
                 'node_modules/@bower_components/restangular/dist/restangular.js',
                 'node_modules/@bower_components/underscore/underscore.js',
-                
+
                 'node_modules/decimal.js/decimal.js',
                 'node_modules/base-58/Base58.js',
 
@@ -154,16 +154,16 @@ module.exports = function (grunt) {
                 'node_modules/@bower_components/cryptojslib/rollups/sha256.js',
 
                 'node_modules/axlsign/axlsign.js',
-                
+
                 'node_modules/@bower_components/clipboard/dist/clipboard.js',
 
                 'node_modules/ngclipboard/dist/ngclipboard.js',
-                
+
                 'node_modules/@bower_components/nprogress/nprogress.js',
                 'node_modules/@bower_components/growl/javascripts/jquery.growl.js',
                 'node_modules/@bower_components/jquery-validation/dist/jquery.validate.js',
                 'node_modules/@bower_components/tooltipster/js/jquery.tooltipster.min.js',
-                
+
                 'node_modules/waves-angular-validate/src/angular-validate.js',
 
                 'node_modules/@bower_components/qrious/dist/umd/qrious.js',
@@ -638,9 +638,7 @@ module.exports = function (grunt) {
     grunt.registerTask('deploy', ['webstore_upload', 's3']);
     grunt.registerTask('test', ['jshint', 'jscs', 'karma:development']);
     grunt.registerTask('styles', ['less', 'copy:fonts', 'copy:img']);
-
     grunt.registerTask('build-local', ['styles', 'concat:scriptsBundle', 'ngtemplates']);
-
     grunt.registerTask('build', [
         'build-local',
         'jscs',

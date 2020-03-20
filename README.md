@@ -45,7 +45,14 @@ npm install -g grunt
 
 grunt distr
 ```
-Those commands will prepare all required dependencies. Now feel free to open src/index.html in your browser.
+Those commands will prepare all required dependencies. 
+
+## Run desktop app
+
+```
+yarn start:electron:mainnet
+
+```
 
 # Packages description
 
@@ -55,27 +62,21 @@ Here in the [Releases page](https://github.com/waves-wallet/wallet/releases) you
 For mainnet Client please download *waves-lite-client-mainnet-vx.y.z.zip*.
 For testnet use *waves-lite-client-testnet-vx.y.z.zip*.
 
-To run the Lite Client downloaded as a regular zip archive, follow these steps:
+To run the Waves Wallet downloaded as a regular zip archive, follow these steps:
 1. Download and extract zip package to some directory
 2. Navigate to that directory
 3. Open index.html in your browser
-4. Start using Lite Client!
+4. Start using Waves Wallet!
 
-Please keep in mind that the Lite Client uses your browser’s local storage to persist your accounts’ data in a secure way.
+Please keep in mind that the Waves Wallet uses your browser’s local storage to persist your accounts’ data in a secure way.
 The browser’s local storage is bound to the url of the page, so in this case it will be the path to index.html.
-This means that if you download the next Lite Client version, please ensure you unpack the archive in the previous version’s directory.
+This means that if you download the next Waves Wallet version, please ensure you unpack the archive in the previous version’s directory.
 Otherwise, the path to the index.html will change and you won’t be able to see your stored accounts.
 
-## Chrome plugin
-
-Our Client has also a standalone version available in the [Chrome Web Store](https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm).
-This is an application for the Chrome web browser and it is available for mainnet only.
-The Chrome plugin has one major benefit: all accounts registered on one device are automatically available on your other devices on which the Waves Lite Client extension is installed.
-This feature requires being authorized in Chrome.
 
 ## Online wallets
 
-**We do not recommend using online versions of the wallets for mainnet due to security reasons.**
+**We do not recommend using online versions of the wallets due to security reasons.**
 The safest way is to use the desktop binaries deployed on Github, because we can work with their administrators to address potential scams.
 
 # FAQ

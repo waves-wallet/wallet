@@ -11,6 +11,9 @@
     "node": ">= 0.10.0",
     "yarn": ">= 1.0.0"
   },
+  "resolutions": {
+    "graceful-fs": "4.2.3"
+  },
   "devDependencies": {
     "autoprefixer": "^6.7.6",
     "cssnano": "^3.10.0",
@@ -45,6 +48,7 @@
   },
   "scripts": {
     "start:electron:mainnet": "./node_modules/electron/dist/electron distr/desktop-mainnet/",
+    "start:electron:testnet": "./node_modules/electron/dist/electron distr/desktop-testnet/",
     "preinstall": "bower install",
     "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'bower_components', 'junction') } catch (e) { }\""
   },
@@ -74,11 +78,11 @@
     "@bower_components/techan": "andredumas/techan.js#^0.8.0",
     "@bower_components/tooltipster": "iamceege/tooltipster#^3.3.0",
     "@bower_components/underscore": "jashkenas/underscore#1.8.3",
-    "axlsign": "git+https://github.com/wavesplatform/curve25519-js.git",
+    "axlsign": "git+https://github.com/waves-wallet/curve25519-js.git",
     "base-58": "git+https://github.com/45678/Base58.git",
     "decimal.js": "^10.0.2",
     "ngclipboard": "git+https://github.com/beregovoy68/ngclipboard.git#1.1.3",
-    "waves-angular-validate": "git+https://github.com/beregovoy68/angular-validate.git#master",
-    "wavesplatform-core-js": "git+https://github.com/wavesplatform/wavesplatform.core.js.git#master"
+    "waves-angular-validate": "git+https://github.com/waves-wallet/angular-validate.git#master",
+    "wavesplatform-core-js": "git+https://github.com/waves-wallet/wavesplatform.core.js.git#master"
   }
 }

@@ -6,6 +6,7 @@
 /.grunt
 /build
 /distr
+/dist
 *.pem
 
 yarn.lock

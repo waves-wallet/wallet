@@ -14,11 +14,12 @@
   "resolutions": {
     "graceful-fs": "4.2.3"
   },
+  "main": "main.js",
   "devDependencies": {
     "autoprefixer": "^6.7.6",
     "cssnano": "^3.10.0",
     "electron": "^1.6.8",
-    "electron-builder": "^17.5.0",
+    "electron-builder": "22.1.0",
     "electron-packager": "^8.7.0",
     "electron-prebuilt": "^1.4.13",
     "grunt": "^1.0.1",
@@ -44,16 +45,18 @@
     "karma-jasmine": "1.0.2",
     "karma-phantomjs-launcher": "1.0.1",
     "pixrem": "^3.0.2",
+    "rimraf": "^3.0.2",
     "waves-grunt-github-releaser": "^0.2.0"
   },
   "scripts": {
+    "build": "rimraf distr/ && grunt distr",
+    "build:distr": "rimraf distr/ && grunt distr && electron-builder --publish never",
     "start:electron:mainnet": "./node_modules/electron/dist/electron distr/desktop-mainnet/",
     "start:electron:testnet": "./node_modules/electron/dist/electron distr/desktop-testnet/",
     "preinstall": "bower install",
     "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'bower_components', 'junction') } catch (e) { }\""
   },
   "dependencies": {
-    "@bower_components/angular": "angular/bower-angular#~1.6.0",
     "@bower_components/angular-animate": "angular/bower-angular-animate#~1.6.0",
     "@bower_components/angular-aria": "angular/bower-angular-aria#1.4 - 1.7.0 || ^1.7.2",
     "@bower_components/angular-loader": "angular/bower-angular-loader#~1.6.0",
@@ -74,15 +77,64 @@
     "@bower_components/ng-droplet": "Wildhoney/ngDroplet#^0.7.0",
     "@bower_components/nprogress": "rstacruz/nprogress#^0.2.0",
     "@bower_components/qrious": "neocotic/qrious#^2.2.0",
-    "@bower_components/restangular": "mgonto/restangular#1.5.2",
     "@bower_components/techan": "andredumas/techan.js#^0.8.0",
     "@bower_components/tooltipster": "iamceege/tooltipster#^3.3.0",
     "@bower_components/underscore": "jashkenas/underscore#1.8.3",
+    "angular": "1.6.10",
     "axlsign": "git+https://github.com/waves-wallet/curve25519-js.git",
     "base-58": "git+https://github.com/45678/Base58.git",
     "decimal.js": "^10.0.2",
     "ngclipboard": "git+https://github.com/beregovoy68/ngclipboard.git#1.1.3",
-    "waves-angular-validate": "git+https://github.com/waves-wallet/angular-validate.git#master",
-    "wavesplatform-core-js": "git+https://github.com/waves-wallet/wavesplatform.core.js.git#master"
+    "restangular": "1.5.2",
+    "waves-angular-validate": "git+https://github.com/waves-wallet/angular-validate.git#master"
+  },
+  "build": {
+    "directories": {
+      "buildResources": "resources"
+    },
+    "files": [
+      {
+        "from": "distr/desktop-mainnet",
+        "to": ".",
+        "filter": [
+          "**/*"
+        ]
+      },
+      "package.json"
+    ],
+    "appId": "io.waveswallet.desktop",
+    "artifactName": "${productName}-${os}-${arch}-${version}.${ext}",
+    "compression": "normal",
+    "asar": true,
+    "extraResources": [],
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ]
+    },
+    "win": {
+      "icon": "img/favicon.ico"
+    },
+    "nsis": {
+      "oneClick": false
+    },
+    "dmg": {
+      "iconSize": 128,
+      "contents": [
+        {
+          "x": 180,
+          "y": 190
+        },
+        {
+          "x": 380,
+          "y": 190,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
   }
 }

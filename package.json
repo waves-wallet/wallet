@@ -80,7 +80,7 @@
     "@bower_components/techan": "andredumas/techan.js#^0.8.0",
     "@bower_components/tooltipster": "iamceege/tooltipster#^3.3.0",
     "@bower_components/underscore": "jashkenas/underscore#1.8.3",
-    "angular": "1.6.10",
+    "angular": "1.7.9",
     "axlsign": "git+https://github.com/waves-wallet/curve25519-js.git",
     "base-58": "git+https://github.com/45678/Base58.git",
     "decimal.js": "^10.0.2",

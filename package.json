@@ -1,6 +1,6 @@
 {
   "name": "waves-wallet",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "A desktop client for the Waves platform",
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   "devDependencies": {
     "autoprefixer": "^6.7.6",
     "cssnano": "^3.10.0",
-    "electron": "^1.6.8",
+    "electron": "8.2.3",
     "electron-builder": "22.1.0",
     "electron-packager": "^8.7.0",
     "electron-prebuilt": "^1.4.13",
@@ -57,14 +57,10 @@
     "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'bower_components', 'junction') } catch (e) { }\""
   },
   "dependencies": {
-    "@bower_components/angular-animate": "angular/bower-angular-animate#~1.6.0",
-    "@bower_components/angular-aria": "angular/bower-angular-aria#1.4 - 1.7.0 || ^1.7.2",
     "@bower_components/angular-loader": "angular/bower-angular-loader#~1.6.0",
     "@bower_components/angular-material": "angular/bower-material#^1.1.1",
     "@bower_components/angular-messages": "angular/bower-angular-messages#1.4 - 1.7.0 || ^1.7.2",
     "@bower_components/angular-mocks": "angular/bower-angular-mocks#~1.6.0",
-    "@bower_components/angular-route": "angular/bower-angular-route#~1.6.0",
-    "@bower_components/angular-sanitize": "angular/bower-angular-sanitize#~1.6.0",
     "@bower_components/clipboard": "zenorocha/clipboard.js#~1.5.5",
     "@bower_components/cryptojslib": "sytelus/CryptoJS#^3.1.2",
     "@bower_components/d3": "mbostock-bower/d3-bower#~4.2.6",
@@ -80,7 +76,11 @@
     "@bower_components/techan": "andredumas/techan.js#^0.8.0",
     "@bower_components/tooltipster": "iamceege/tooltipster#^3.3.0",
     "@bower_components/underscore": "jashkenas/underscore#1.8.3",
-    "angular": "1.6.10",
+    "angular": "1.7.9",
+    "angular-animate": "1.7.9",
+    "angular-aria": "1.7.9",
+    "angular-route": "1.7.9",
+    "angular-sanitize": "1.7.9",
     "axlsign": "git+https://github.com/waves-wallet/curve25519-js.git",
     "base-58": "git+https://github.com/45678/Base58.git",
     "decimal.js": "^10.0.2",

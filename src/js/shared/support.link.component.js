@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var url = 'https://support.wavesplatform.com';
+    var url = 'https://support.waveswallet.io';
 
     function SupportLinkController() {}
 
@@ -9,6 +9,6 @@
         .module('app.shared')
         .component('wavesSupportLink', {
             controller: SupportLinkController,
-            template: '<a href="http://' + url + '" target="_blank">' + url + '</a>'
+            template: '<a href="' + url + '" target="_blank">' + url + '</a>'
         });
 })();

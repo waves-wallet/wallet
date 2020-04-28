@@ -1,6 +1,6 @@
 # Client
 
-![Alt text](https://pbs.twimg.com/media/CjUjPVgVAAA60Pv.jpg "Waves Lite Client Screen")
+![Alt text](https://pbs.twimg.com/media/CjUjPVgVAAA60Pv.jpg "Waves Wallet Screen")
 
 Ever wanted to access your crypto funds quickly but had to wait for hours while the blockchain downloads first?
 The Waves Wallet connects to public Waves nodes to retrieve up-to-date blockchain information.
@@ -21,8 +21,8 @@ Every transaction will be signed locally with JavaScript and transmitted to the 
 
 # Testnet and Mainnet
 
-The Client sources are currently setup for testnet.
-If you want to run on mainnet please change the according settings in js/app.js. Check for the possible values Gruntfile.js.
+The Client sources are currently setup for TESTNET.
+If you want to run on MAINNET please change the according settings in js/app.js. Check for the possible values Gruntfile.js.
 
 # How to use the codebase
 
@@ -42,10 +42,12 @@ yarn
 Since we are reorganizing the building process, there is something more you need to have a fully working Waves Wallet:
 ```
 npm install -g grunt
-
-grunt distr
 ```
-Those commands will prepare all required dependencies. 
+
+## Build desktop app
+```
+yarn build
+```
 
 ## Run desktop app
 
@@ -82,10 +84,10 @@ The safest way is to use the desktop binaries deployed on Github, because we can
 # FAQ
 ## Can I generate account being completely offline?
 
-Yes, you can! The current Lite Client version tries to access the required node only when you log in to your account.
-All you need to do is to download the Lite Client and run it in a safe environment (i.e. on a machine without access to the internet).
+Yes, you can! The current Waves Wallet version tries to access the required node only when you log in to your account.
+All you need to do is to download the Waves Wallet and run it in a safe environment (i.e. on a machine without access to the internet).
 
-## Can I make the Lite Client use my own node instead of the default one?
+## Can I make the Waves Wallet use my own node instead of the default one?
 
 Yes, but you will have to modify some javascript code. Follow these simple steps:
 1. Open the js/waves-lite-client-mainnet-vx.y.z.js in your favourite text editor

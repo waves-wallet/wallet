@@ -29,7 +29,7 @@ module.exports = function (grunt) {
             patcherTarget = target.replace('chrome.', '');
         }
 
-        if (target.indexOf('desktop') == 0) {
+        if (target.indexOf('desktop') === 0) {
             patcherTarget = target.replace('desktop.', '');
         }
 
@@ -77,7 +77,7 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         meta: {
             stylesheets: [
-                'node_modules/@bower_components/angular/angular-csp.css',
+                'node_modules/angular/angular-csp.css',
                 'node_modules/@bower_components/angular-material/angular-material.css',
                 // application stylesheets
                 'distr/devel/css/style.css'
@@ -90,7 +90,7 @@ module.exports = function (grunt) {
                 testnet: {
                     name: 'testnet',
                     code: 'T',
-                    server: 'https://testnet1.wavesnodes.com',
+                    server: 'https://nodes-testnet.wavesnodes.com/',
                     coinomat: 'https://test.coinomat.com',
                     matcher: 'https://testnet1.wavesnodes.com',
                     datafeed: 'https://marketdata.wavesplatform.com'
@@ -138,13 +138,14 @@ module.exports = function (grunt) {
                 // this library doesn't work properly being included after angular
                 'node_modules/@bower_components/js-sha3/src/sha3.js',
 
-                'node_modules/@bower_components/angular/angular.js',
+                'node_modules/angular/angular.js',
+
                 'node_modules/@bower_components/angular-sanitize/angular-sanitize.js',
                 'node_modules/@bower_components/angular-animate/angular-animate.js',
                 'node_modules/@bower_components/angular-mocks/angular-mocks.js',
                 'node_modules/@bower_components/angular-aria/angular-aria.js',
                 'node_modules/@bower_components/angular-material/angular-material.js',
-                'node_modules/@bower_components/restangular/dist/restangular.js',
+                'node_modules/restangular/dist/restangular.js',
                 'node_modules/@bower_components/underscore/underscore.js',
 
                 'node_modules/decimal.js/decimal.js',
@@ -173,10 +174,44 @@ module.exports = function (grunt) {
 
                 'src/js/vendor/jquery.modal.js',
 
-                'node_modules/wavesplatform-core-js/distr/wavesplatform-core.js'
             ],
             application: [
                 // project sources
+                'src/js/wavesplatform-core-js/core/waves.money.js',
+                'src/js/wavesplatform-core-js/core/core.module.js',
+                'src/js/wavesplatform-core-js/core/core.services.module.js',
+                'src/js/wavesplatform-core-js/core/account.service.js',
+                'src/js/wavesplatform-core-js/core/address.service.js',
+                'src/js/wavesplatform-core-js/core/alias.request.service.js',
+                'src/js/wavesplatform-core-js/core/api.service.js',
+                'src/js/wavesplatform-core-js/core/asset.service.js',
+                'src/js/wavesplatform-core-js/core/coinomat.currency.mapping.service.js',
+                'src/js/wavesplatform-core-js/core/coinomat.fiat.service.js',
+                'src/js/wavesplatform-core-js/core/coinomat.service.js',
+                'src/js/wavesplatform-core-js/core/core.constants.js',
+                'src/js/wavesplatform-core-js/core/core.directives.module.js',
+                'src/js/wavesplatform-core-js/core/core.filter.module.js',
+                'src/js/wavesplatform-core-js/core/core.services.wordlist.constant.js',
+                'src/js/wavesplatform-core-js/core/crypto.service.js',
+                'src/js/wavesplatform-core-js/core/datafeed.api.service.js',
+                'src/js/wavesplatform-core-js/core/formatting.filter.js',
+                'src/js/wavesplatform-core-js/core/formatting.service.js',
+                'src/js/wavesplatform-core-js/core/leasing.request.service.js',
+                'src/js/wavesplatform-core-js/core/localstorage.chrome.service.js',
+                'src/js/wavesplatform-core-js/core/localstorage.html5.service.js',
+                'src/js/wavesplatform-core-js/core/matcher.api.service.js',
+                'src/js/wavesplatform-core-js/core/matcher.request.service.js',
+                'src/js/wavesplatform-core-js/core/order.price.js',
+                'src/js/wavesplatform-core-js/core/passphrase.service.js',
+                'src/js/wavesplatform-core-js/core/sign.service.js',
+                'src/js/wavesplatform-core-js/core/storage.provider.js',
+                'src/js/wavesplatform-core-js/core/utility.service.js',
+                'src/js/wavesplatform-core-js/core/validate.service.js',
+
+                'src/js/wavesplatform-core-js/vendor/blake2b.js',
+                'src/js/wavesplatform-core-js/vendor/converters.js',
+
+
                 'src/js/ui.module.js',
                 'src/js/ui.utils.service.js',
                 'src/js/application.context.factory.js',
@@ -279,10 +314,10 @@ module.exports = function (grunt) {
         },
         // Task configuration.
         jshint: {
-            all: ['src/js/**/*.js', '!src/js/vendor/*.js']
+            all: ['src/js/**/*.js', '!src/js/vendor/*.js', '!src/js/wavesplatform-core-js/vendor/*.js']
         },
         jscs: {
-            src: ['src/js/**/*.js', '!src/js/vendor/*.js'],
+            src: ['src/js/**/*.js', '!src/js/vendor/*.js', '!src/js/wavesplatform-core-js/vendor/*.js'],
             options: {
                 config: '.jscsrc'
             }

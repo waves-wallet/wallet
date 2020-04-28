@@ -139,11 +139,11 @@ module.exports = function (grunt) {
                 'node_modules/@bower_components/js-sha3/src/sha3.js',
 
                 'node_modules/angular/angular.js',
+                'node_modules/angular-sanitize/angular-sanitize.js',
+                'node_modules/angular-animate/angular-animate.js',
+                'node_modules/angular-aria/angular-aria.js',
 
-                'node_modules/@bower_components/angular-sanitize/angular-sanitize.js',
-                'node_modules/@bower_components/angular-animate/angular-animate.js',
                 'node_modules/@bower_components/angular-mocks/angular-mocks.js',
-                'node_modules/@bower_components/angular-aria/angular-aria.js',
                 'node_modules/@bower_components/angular-material/angular-material.js',
                 'node_modules/restangular/dist/restangular.js',
                 'node_modules/@bower_components/underscore/underscore.js',

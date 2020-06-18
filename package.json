@@ -76,7 +76,7 @@
     "@bower_components/techan": "andredumas/techan.js#^0.8.0",
     "@bower_components/tooltipster": "iamceege/tooltipster#^3.3.0",
     "@bower_components/underscore": "jashkenas/underscore#1.8.3",
-    "angular": "1.7.9",
+    "angular": "1.8.0",
     "angular-animate": "1.7.9",
     "angular-aria": "1.7.9",
     "angular-route": "1.7.9",
